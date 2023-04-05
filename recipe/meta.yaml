@@ -1,4 +1,4 @@
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: fast-query-parsers
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/f/fast-query-parsers/fast_query_parsers-{{ version }}.tar.gz
-  sha256: f8878fffe0249159a8deaaeb0095c3a2af202921e97b2c56d0dbdf4c39032672
+  sha256: fdeb39582a06f77c02e9a3d7a61f9ea7025c0c18b0e42d2e78a4d3cf1d13d862
   patches:
     # TODO remove after https://github.com/starlite-api/fast-query-parsers/pull/16
     - 0000-no-runtime-maturin.patch
 
 build:
-  skip: True  # [py<38]
-  number: 1
+  skip: true  # [py<38]
+  number: 0
 
 requirements:
   build:

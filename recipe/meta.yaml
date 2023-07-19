@@ -1,5 +1,6 @@
 {% set maturin_version = ">=0.14,<0.15" %}
-{% set version = "1.0.0" %}
+{% set maturin_version = ">=0.14,<0.15" %}
+{% set version = "1.0.1" %}
 {% set maturin_version = ">=0.14,<0.15" %}
 
 package:
@@ -8,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/f/fast-query-parsers/fast_query_parsers-{{ version }}.tar.gz
-  sha256: 76f32c69c13a0a690111e9e3d8b6f63898aa45d604950e91d5c6a6b2abad6aea
+  sha256: 242615e036aa41b32362ddc50b4ac6b067571fd346f437702f1c3109b94c091f
 
 build:
   skip: true  # [py<38]

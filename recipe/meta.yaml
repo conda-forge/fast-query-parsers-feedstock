@@ -1,6 +1,4 @@
-{% set maturin_version = ">=0.14,<0.15" %}
-{% set maturin_version = ">=0.14,<0.15" %}
-{% set version = "1.0.2" %}
+{% set version = "1.0.3" %}
 {% set maturin_version = ">=0.14,<0.15" %}
 
 package:
@@ -9,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/f/fast-query-parsers/fast_query_parsers-{{ version }}.tar.gz
-  sha256: c3f3f66e2d139a003ebb061963a72d3becf24e3a207d07c7b7c454446a5ebbfb
+  sha256: 5200a9e02997ad51d4d76a60ea1b256a68a184b04359540eb6310a15013df68f
 
 build:
   skip: true  # [py<38]
@@ -46,7 +44,7 @@ test:
     - pytest-cov
 
 about:
-  home: https://github.com/starlite-api/fast-query-parsers
+  home: https://github.com/litestar-org/fast-query-parsers
   summary: Ultra-fast query string and url-encoded form-data parsers
   license: MIT
   license_file:

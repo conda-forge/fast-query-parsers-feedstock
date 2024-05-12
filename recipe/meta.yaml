@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [py<38]
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -20,6 +20,7 @@ requirements:
     - crossenv                               # [build_platform != target_platform]
     - maturin {{ maturin_version }}          # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
   host:

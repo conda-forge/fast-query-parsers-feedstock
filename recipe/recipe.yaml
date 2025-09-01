@@ -3,7 +3,7 @@ schema_version: 1
 context:
   version: 1.0.3
   maturin_version: ">=0.14,<0.15"
-  python_check_max: "3.13.*"
+  python_check_max: "3.13"
 
 package:
   name: fast-query-parsers

@@ -8,16 +8,16 @@ set PYO3_PYTHON=%PYTHON%
 
 mkdir "%TEMP%"
 
-%PYTHON% -m pip install -vv . --no-deps --no-build-isolation ^
-    || exit 1
+%PYTHON% -m pip install -vv . --no-deps --no-build-isolation --disable-pip-version-check ^
+    || exit 2
 
 :: dump licenses
 cargo-bundle-licenses ^
     --format yaml ^
     --output "%SRC_DIR%\THIRDPARTY.yml" ^
-    || exit 1
+    || exit 3
 
 chcp 65001
 
 "%PYTHON%" -m pip install fast-query-parsers -vv --no-index --find-links "%SRC_DIR%\target\wheels" ^
-    || exit 1
+    || exit 4

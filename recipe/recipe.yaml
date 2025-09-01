@@ -20,6 +20,8 @@ build:
     version_independent: true
   # only build for the minimal python version
   skip: not (match(python, python_min ~ ".*") and is_abi3)
+  script:
+    file: build-fast-query-parsers
 
 requirements:
   build:

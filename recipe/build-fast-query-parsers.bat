@@ -2,9 +2,11 @@
 
 set PYTHONIOENCODING="UTF-8"
 set PYTHONUTF8=1
-set RUST_BACKTRACE=1
 set TEMP="%SRC_DIR%\tmpbuild_%PY_VER%"
 set PYO3_PYTHON=%PYTHON%
+
+set CARGO_HOME=c:\.cg
+copy "%RECIPE_DIR%\cargo-auditable-wrapper.bat" "%BUILD_PREFIX%\Library\bin\cargo-auditable-wrapper.bat"
 
 mkdir "%TEMP%"
 

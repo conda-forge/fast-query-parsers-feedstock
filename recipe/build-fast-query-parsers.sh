@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -eux
 
-export RUST_BACKTRACE=1
-
 export CARGO_HOME="${BUILD_PREFIX}/cargo"
 export PATH="${PATH}:${CARGO_HOME}/bin"
 export PYO3_PYTHON="${PYTHON}"
@@ -10,6 +8,9 @@ export PYO3_PYTHON="${PYTHON}"
 export CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_LINKER="${CC}"
 export CARGO_TARGET_X86_64_APPLE_DARWIN_LINKER="${CC}"
 export CARGO_TARGET_AARCH64_APPLE_DARWIN_LINKER="${CC}"
+
+cp "${RECIPE_DIR}/cargo-auditable-wrapper.sh" "${BUILD_PREFIX}/bin/cargo-auditable-wrapper"
+chmod 755 "${BUILD_PREFIX}/bin/cargo-auditable-wrapper"
 
 rustc --version
 
